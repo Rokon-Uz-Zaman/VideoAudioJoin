@@ -7,7 +7,6 @@ from datetime import datetime
 videopath='/content/test video.mp4'
 audiopath='/content/my_result.mp3'
 
-
 #read
 video=VideoFileClip(videopath)
 audio=AudioFileClip(audiopath)
