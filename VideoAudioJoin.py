@@ -1,9 +1,11 @@
 #pip install moviepy
+
 from moviepy.editor import VideoFileClip,AudioFileClip
+from datetime import datetime
 
 #path
-videopath='/content/videofile1.mp4'
-audiopath='/content/audiofile1.mp3'
+videopath='/content/test video.mp4'
+audiopath='/content/my_result.mp3'
 
 
 #read
@@ -14,4 +16,5 @@ audio=AudioFileClip(audiopath)
 video=video.set_audio(audio)
 
 #write
-video.write_videofile("videoAudiojoined.mp4")
+current_time=str(datetime.now())
+video.write_videofile(f"videoAudiojoin{current_time}.mp4")
